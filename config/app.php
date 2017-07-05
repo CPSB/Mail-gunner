@@ -172,6 +172,7 @@ return [
         Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
         Spatie\TranslationLoader\TranslationServiceProvider::class,
         ConsoleTVs\Charts\ChartsServiceProvider::class,
+        GrahamCampbell\GitHub\GitHubServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -233,6 +234,7 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
+        'GitHub' => GrahamCampbell\GitHub\Facades\GitHub::class,
 
     ],
 
