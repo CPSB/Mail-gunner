@@ -21,6 +21,7 @@ Route::get('/discaimer', 'DisclaimerController@index')->name('disclaimer.index')
 Route::get('/config', 'ConfigController@index')->name('config.index');
 Route::get('/config/backups', 'ConfigController@getBackups')->name('config.backup');
 Route::get('/config/smtp', 'ConfigController@smtp')->name('config.smtp');
+Route::get('/config/github', 'ConfigController@github')->name('config.github');
 
 Route::get('/env/create', 'EnvController@create')->name('env.create');
 Route::get('/env/delete/{timestamp}', 'EnvController@destroy')->name('env.delete');

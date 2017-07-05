@@ -145,7 +145,7 @@
                         <span style="margin-right: 7px;" class="fa fa-btn fa-color fa-database" aria-hidden="true"></span>
                         Databank configuratie
                     </a>
-                    <a href="" class="list-group-item">
+                    <a href="{{ route('config.github') }}" class="list-group-item">
                         <span style="margin-right: 7px;" class="fa fa-btn fa-color fa-github" aria-hidden="true"></span> GitHub configuratie
                     </a>
                     <a href="{{ route('config.smtp') }}" class="list-group-item">

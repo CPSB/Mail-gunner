@@ -56,4 +56,17 @@ class ConfigController extends Controller
             echo $e->getMessage();
         }
     }
+
+    public function github()
+    {
+        $env = new Env();
+
+        try {
+            // TODO: Implement dot variables for github.
+
+            return view('config.github');
+        } catch (DotEnvException $e) {
+            echo $e->getMessage();
+        }
+    }
 }
