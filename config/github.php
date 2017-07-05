@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'default' => 'main',
+    'default' => 'other',
 
     /*
     |--------------------------------------------------------------------------
@@ -58,8 +58,8 @@ return [
         ],
 
         'other' => [
-            'username'   => 'your-username',
-            'password'   => 'your-password',
+            'username'   => env('GITHUB_USER', 'your-username'),
+            'password'   => env('GITHUB_PASSWORD','your-password'),
             'method'     => 'password',
             // 'backoff'    => false,
             // 'cache'      => false,
