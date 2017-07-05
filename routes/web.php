@@ -16,6 +16,8 @@ Auth::routes();
 Route::get('/', 'HomeController@welcome')->name('/');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/discaimer', 'DisclaimerController@index')->name('disclaimer.index');
+
 Route::get('/config', 'ConfigController@index')->name('config.index');
 Route::get('/config/backups', 'ConfigController@getBackups')->name('config.backup');
 Route::get('/config/smtp', 'ConfigController@smtp')->name('config.smtp');
