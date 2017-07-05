@@ -44,7 +44,7 @@
                         <li><a href="{{ route('statistics.index') }}"><span class="fa fa-bar-chart-o fa-color" aria-hidden="true"></span> Statistieken</a></li>
                     @endif
 
-                    <li><a href="{{ route('dosclaimer.index') }}"><span class="fa fa-color fa-legal" aria-hidden="true"></span> Disclaimer</a></li>
+                    <li><a href="{{ route('disclaimer.index') }}"><span class="fa fa-color fa-legal" aria-hidden="true"></span> Disclaimer</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
