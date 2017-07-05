@@ -62,9 +62,9 @@ class ConfigController extends Controller
         $env = new Env();
 
         try {
-            // TODO: Implement dot variables for github.
+            $data['github_user'] = $env->getValue('GITHUB_USER');
 
-            return view('config.github');
+            return view('config.github', $data);
         } catch (DotEnvException $e) {
             echo $e->getMessage();
         }

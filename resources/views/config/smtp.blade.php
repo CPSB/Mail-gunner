@@ -77,7 +77,8 @@
                 </label>
 
                 <div class="col-md-9">
-                    <input type="text" class="form-control" placeholder="Mailer server gebruikers wachtwoord" name="MAIL_PASSWORD">
+                    <input type="password" class="form-control" placeholder="Mailer server gebruikers wachtwoord" name="MAIL_PASSWORD">
+                    <small class="help-block">* De mail server zijn wachtwoord word niet weergegeven uit veiligheid.</small>
                 </div>
             </div>
         </fieldset>

@@ -5,8 +5,18 @@ namespace App\Http\Controllers;
 use Brotzka\DotenvEditor\DotenvEditor as Env;
 use Illuminate\Http\Request;
 
+/**
+ * Class EnvController
+ *
+ * @package App\Http\Controllers
+ */
 class EnvController extends Controller
 {
+    /**
+     * Create a new configuration backup.
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function create()
     {
         $env = new Env();
@@ -18,7 +28,9 @@ class EnvController extends Controller
     }
 
     /**
-     * @param integer $timestamp Unformatted timestalp for the config backup.
+     * Destroy a configuration backup.
+     *
+     * @param  integer $timestamp Unformatted timestalp for the config backup.
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($timestamp)
@@ -30,6 +42,12 @@ class EnvController extends Controller
         return redirect()->route('config.backup');
     }
 
+    /**
+     * Download a confiuration backup. When not found download current configuration.
+     *
+     * @param  bool $filename The file name from the backup.
+     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
+     */
     public function download($filename = false)
     {
         $env = new Env();
@@ -44,6 +62,12 @@ class EnvController extends Controller
         return response()->download(base_path() . "/.env", ".env");
     }
 
+    /**
+     * Restore a previous taken backup file.
+     *
+     * @param  integer $backuptimestamp The unformatted timestamp from the backup.
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function restore($backuptimestamp)
     {
         $env = new Env();

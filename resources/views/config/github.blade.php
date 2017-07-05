@@ -21,7 +21,7 @@
             </label>
 
             <div class="col-md-9">
-                <input type="text" class="form-control" placeholder="GitHub gebruikersnaam" value="">
+                <input type="text" class="form-control" placeholder="GitHub gebruikersnaam" value="{{ $github_user }}">
             </div>
         </div>
 
