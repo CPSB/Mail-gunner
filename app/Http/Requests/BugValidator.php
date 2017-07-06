@@ -4,6 +4,11 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class BugValidator
+ *
+ * @package App\Http\Requests
+ */
 class BugValidator extends FormRequest
 {
     /**
@@ -13,7 +18,7 @@ class BugValidator extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +29,8 @@ class BugValidator extends FormRequest
     public function rules()
     {
         return [
-            //
+            'email' => 'required',
+            'body'  => 'required',
         ];
     }
 }

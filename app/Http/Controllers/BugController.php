@@ -37,7 +37,7 @@ class BugController extends Controller
      * @param  BugValidator $input
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $input)
+    public function store(BugValidator $input)
     {
         // dd(config('github.connections.other.username'), config('github.connections.other.password'));
         $input->merge(['title' => 'Foutmelding gebruiker.']);
