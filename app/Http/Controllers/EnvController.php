@@ -52,7 +52,7 @@ class EnvController extends Controller
     }
 
     /**
-     * Download a confiuration backup. When not found download current configuration.
+     * Download a configuration backup. When not found download current configuration.
      *
      * @param  bool $filename The file name from the backup.
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
