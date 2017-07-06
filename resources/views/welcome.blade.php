@@ -47,6 +47,18 @@
                                     <input type="text" class="form-control input-sm" name="city" placeholder="Stad">
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <select class="form-control input-sm" name="country_id">
+                                        <option value="">-- Selecteer je land --</option>
+
+                                        @foreach($countries as $country)
+                                            <option value="{{ $country->id }}">{{ $country->long_name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="panel-footer">

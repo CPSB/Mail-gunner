@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Countries;
+
 class HomeController extends Controller
 {
     /**
@@ -18,7 +20,8 @@ class HomeController extends Controller
     public function welcome()
     {
         //dd(trans('action.title'));
-        return view('welcome');
+        $countries = Countries::all();
+        return view('welcome', compact('countries'));
     }
 
     /**
