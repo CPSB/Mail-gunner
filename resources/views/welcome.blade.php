@@ -7,10 +7,11 @@
             <div class="col-md-9">
                 <div class="panel panel-default">
                     <div class="panel-heading clearfix">
-                        {title mailing artillery}
+                        @lang('action.title')
                         <i><strong class="pull-right">0 / 0 mails verzonden</strong></i>
                     </div>
                     <div class="panel-body">
+                        @lang('action.text')
                     </div>
                 </div>
             </div>
