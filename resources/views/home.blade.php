@@ -10,8 +10,9 @@
                 <div class="panel-body">
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="nl">
-                            <form method="" class="form-horizontal">
+                            <form method="post" action="{{ route('action.text.store') }}" class="form-horizontal">
                                 {{ csrf_field() }}
+                                <input type="hidden" name="language" value="nl">
 
                                 <div class="form-group">
                                     <div class="col-md-6">
@@ -43,8 +44,9 @@
                         </div>
 
                         <div role="tabpanel" class="tab-pane" id="fr">
-                            <form method="" class="form-horizontal">
+                            <form method="post" action="{{ route('action.text.store') }}" class="form-horizontal">
                                 {{ csrf_field() }}
+                                <input type="hidden" name="language" value="fr">
 
                                 <div class="form-group">
                                     <div class="col-md-6">
@@ -76,8 +78,9 @@
                         </div>
 
                         <div role="tabpanel" class="tab-pane" id="eng">
-                            <form method="" class="form-horizontal">
+                            <form method="post" action="{{ route('action.text.store') }}" class="form-horizontal">
                                 {{ csrf_field() }}
+                                <input type="hidden" name="language" value="en">
 
                                 <div class="form-group">
                                     <div class="col-md-6">

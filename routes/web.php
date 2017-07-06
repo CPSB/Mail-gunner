@@ -30,5 +30,6 @@ Route::get('/env/delete/{timestamp}', 'EnvController@destroy')->name('env.delete
 Route::get('/env/download/{filename}', 'EnvController@download')->name('env.download');
 Route::get('/env/restore/{timestamp}', 'EnvController@restore')->name('env.restore');
 
+Route::post('/action/text', 'ActionController@store')->name('action.text.store');
 
 Route::get('/statictics', 'StatisticsController@index')->name('statistics.index');

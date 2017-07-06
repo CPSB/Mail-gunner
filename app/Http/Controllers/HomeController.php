@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Spatie\TranslationLoader\LanguageLine;
-
 class HomeController extends Controller
 {
     /**
