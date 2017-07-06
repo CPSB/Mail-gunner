@@ -45,6 +45,10 @@
                         @endif
 
                         <li><a href="{{ route('disclaimer.index') }}"><span class="fa fa-color fa-legal" aria-hidden="true"></span> Disclaimer</a></li>
+
+                        @if (! Auth::check())
+                             <li><a href="{{ route('bug.index') }}"><span class="fa fa-bug fa-color"></span> Meld een probleem</a></li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -70,7 +74,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href=""><span class="fa fa-color fa-btn fa-cog" aria-hidden="true"></span> Instellingen</a></li>
-                                    <li><a href=""><span class="fa fa-color fa-btn fa-bug" aria-hidden="true"></span> Meld een probleem</a></li>
+                                    <li><a href="{{ route('bug.index')  }}"><span class="fa fa-color fa-btn fa-bug" aria-hidden="true"></span> Meld een probleem</a></li>
                                     <li class="divider"></li>
                                     <li>
                                         <a href="{{ route('logout') }}"

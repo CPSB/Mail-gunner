@@ -17,6 +17,7 @@ class HomeController extends Controller
 
     public function welcome()
     {
+        //dd(trans('action.title'));
         return view('welcome');
     }
 

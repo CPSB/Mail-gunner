@@ -61,7 +61,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href=""><span class="fa fa-color fa-btn fa-cog" aria-hidden="true"></span> Instellingen</a></li>
-                                <li><a href=""><span class="fa fa-color fa-btn fa-bug" aria-hidden="true"></span> Meld een probleem</a></li>
+                                <li><a href="{{ route('bug.index') }}"><span class="fa fa-color fa-btn fa-bug" aria-hidden="true"></span> Meld een probleem</a></li>
                                 <li class="divider"></li>
                                 <li>
                                     <a href="{{ route('logout') }}"

@@ -29,8 +29,10 @@ class ActionController extends Controller
             ->where('text', 'REGEXP', "\"{$input->language}\"");
 
         if ($titleCheck->count() === 1) {
-            $title        = $titleCheck->firstOrfail();
-            $title->text   = [$input->language => $input->title];
+            $oldText = $titleCheck->firstOrfail();
+
+            $title        = $oldText;
+            $title->text  = [$input->language => $input->title];
             $title->save();
         } else {
             LanguageLine::create(['group' => 'action', 'key' => 'title', 'text'  => [$input->language => $input->title]]);

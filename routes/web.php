@@ -25,6 +25,9 @@ Route::post('/config/update/github', 'EnvController@updateGithub')->name('config
 Route::post('/config/update/smtp', 'EnvController@updateSmtp')->name('config.update.smtp');
 Route::post('/config/update/database', 'EnvController@updateDatabase')->name('config.update.db');
 
+Route::get('bug', 'BugController@index')->name('bug.index');
+Route::post('bug/store', 'BugController@store')->name('bug.store');
+
 Route::get('/env/create', 'EnvController@create')->name('env.create');
 Route::get('/env/delete/{timestamp}', 'EnvController@destroy')->name('env.delete');
 Route::get('/env/download/{filename}', 'EnvController@download')->name('env.download');
