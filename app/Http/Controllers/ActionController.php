@@ -22,11 +22,11 @@ class ActionController extends Controller
     {
         $titleCheck = LanguageLine::where('group', 'action')
             ->where('key', 'title')
-            ->where("meta->{$input->language}", $input->title);
+            ->where('text', 'REGEXP', "\"{$input->language}\"");
 
         $textCheck  = LanguageLine::where('group', 'action')
             ->where('key', 'text')
-            ->where("meta->{$input->language}", $input->text);
+            ->where('text', 'REGEXP', "\"{$input->language}\"");
 
         if ($titleCheck->count() === 1) {
             $title        = $titleCheck->firstOrfail();
