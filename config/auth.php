@@ -99,4 +99,18 @@ return [
         ],
     ],
 
+    /**
+     * --------------------------------------------------------------------------
+     * Routes config
+     * --------------------------------------------------------------------------
+     *
+     * what routes you want to use in your application. You can do this with this
+     * variables below. Default apll routes will be used.
+     *
+     */
+    'routes' => [
+        'register' => env('AUTH_REGISTER', true),
+        'login'    => env('AUTH_LOGIN', true),
+    ],
+
 ];
