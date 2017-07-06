@@ -17,6 +17,7 @@
             </div>
 
             <div class="col-md-3">
+
                 <div class="panel panel-danger">
                     <div class="panel-heading">
                         <span class="fa fa-envelope" aria-hidden="true"></span> Ik steun deze mailingactie:
@@ -56,6 +57,21 @@
                             <span class="fa fa-undo"></span> Reset
                         </button>
                     </div>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.welzijn.activisme.be" class="btn btn-block btn-social btn-facebook">
+                        <span class="fa fa-facebook"></span> Deel op Facebook
+                    </a>
+                    <a href="https://twitter.com/home?status=Ik%20kom%20op%20voor%20mijn%20welzijn.%20%0A%0A-%20http%3A//www.welzijn.activisme.be%20%23ActivismeBE" class="btn btn-block btn-social btn-twitter">
+                        <span class="fa fa-twitter"></span> Deel op Twitter
+                    </a>
+                    <a href="https://plus.google.com/share?url=http%3A//www.welzijn.activisme.be" class="btn btn-block btn-social btn-google">
+                        <span class="fa fa-google"></span> Deel op Google+
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A//www.welzijn.activisme.be&amp;title=Ik%20kom%20op%20voor%20mijn&20welzijn&amp;summary=&amp;source=" class="btn btn-block btn-social btn-linkedin">
+                        <span class="fa fa-linkedin"></span> Deel op LinkedIn
+                    </a>
                 </div>
             </div>
 
