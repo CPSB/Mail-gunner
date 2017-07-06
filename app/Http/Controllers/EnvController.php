@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ConfigDatabaseValidator;
+use App\Http\Requests\ConfigGithubValidator;
+use App\Http\Requests\ConfigSmtpValidator;
 use Brotzka\DotenvEditor\DotenvEditor as Env;
+use Brotzka\DotenvEditor\Exceptions\DotEnvException;
 use Illuminate\Http\Request;
 
 /**
@@ -73,7 +77,64 @@ class EnvController extends Controller
         $env = new Env();
         $env->restoreBackup($backuptimestamp);
 
-        flash()->success('De configuratie is hersteld naar het aangegeven punt.');
+        flash('De configuratie is hersteld naar het aangegeven punt.')->success();
         return redirect()->route('config.backup');
+    }
+
+    /**
+     * Method for update the github credentials.
+     *
+     * @param  ConfigGithubValidator $input
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateGithub(ConfigGithubValidator $input)
+    {
+        try {
+            $env = new Env();
+            $env->changeEnv($input->all());
+
+            flash('De Github configuratie is aangepast')->success();
+            return redirect()->route('config.github');
+        } catch (DotEnvException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    /**
+     * Method for updating the SMTP data.
+     *
+     * @param  ConfigSmtpValidator $input
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateSmtp(ConfigSmtpValidator $input)
+    {
+        try {
+            $env = new Env();
+            $env->changeEnv($input->all());
+
+            flash('De SMTP gegevens zijn aangepast.')->success();
+            return redirect()->route('config.smtp');
+        } catch (DotEnvException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    /**
+     * Method for updating the database logic.
+     *
+     * @param  ConfigDatabaseValidator $input
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateDatabase(ConfigDatabaseValidator $input)
+    {
+        try {
+            $env = new Env();
+            $env->changeEnv($input->all());
+
+            flash('De Database gegevens zijn aangepast.');
+            return redirect()->route('config.index');
+        } catch (DotEnvException $e) {
+            echo $e->getMessage();
+        }
     }
 }

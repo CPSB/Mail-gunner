@@ -23,6 +23,10 @@ Route::get('/config/backups', 'ConfigController@getBackups')->name('config.backu
 Route::get('/config/smtp', 'ConfigController@smtp')->name('config.smtp');
 Route::get('/config/github', 'ConfigController@github')->name('config.github');
 
+Route::post('/config/update/github', 'EnvController@updateGithub')->name('config.update.github');
+Route::post('/config/update/smtp', 'EnvController@updateSmtp')->name('config.update.smtp');
+Route::post('/config/update/database', 'EnvController@updateDatabase')->name('config.update.db');
+
 Route::get('/env/create', 'EnvController@create')->name('env.create');
 Route::get('/env/delete/{timestamp}', 'EnvController@destroy')->name('env.delete');
 Route::get('/env/download/{filename}', 'EnvController@download')->name('env.download');

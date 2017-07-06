@@ -12,7 +12,7 @@
         Dus wees zeker van je database gegevens die je wilt invoegen of aanpassen.
     </div>
 
-    <form class="form-horizontal" action="" method="">
+    <form class="form-horizontal" action="{{ route('config.update.db') }}" method="post">
         {{ csrf_field() }}
 
         <div class="form-group">
@@ -21,7 +21,7 @@
             </label>
 
             <div class="col-md-9">
-                <input type="text" name="DB_NAME" class="form-control" placeholder="De naam van de databank." value="{{ $db_name }}">
+                <input type="text" name="DB_DATABASE" class="form-control" placeholder="De naam van de databank." value="{{ $db_name }}">
             </div>
         </div>
 
@@ -46,7 +46,7 @@
             </label>
 
             <div class="col-md-9">
-                <input type="text" name="DB_USER" class="form-control" placeholder="Database gebruiker" value="{{ $db_user }}">
+                <input type="text" name="DB_USERNAME" class="form-control" placeholder="Database gebruiker" value="{{ $db_user }}">
             </div>
         </div>
 

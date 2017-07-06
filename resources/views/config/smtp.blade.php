@@ -13,7 +13,7 @@
         raden we aan om vrij zeker te zijn van je gegevens.
     </div>
 
-    <form class="form-horizontal" method="" action="">
+    <form class="form-horizontal" method="post" action="{{ route('config.update.smtp') }}">
         {{ csrf_field() }}
 
         <fieldset>
@@ -41,22 +41,22 @@
                 <div class="col-md-6">
                     <select name="MAIL_DRIVER" class="form-control">
                         <option value="">-- Selecteer je driver --</option>
-                        <option value="smtp">SMTP</option>
-                        <option value="sendmail">Sendmail</option>
-                        <option value="mailgun">Mailgun</option>
-                        <option value="mandrill">Mandrill</option>
-                        <option value="ses">SES</option>
-                        <option value="sparkpost">Sparkpost</option>
-                        <option value="log">Log</option>
-                        <option value="array">Array</option>
+                        <option value="smtp"        @if ((string) $mail_driver === 'smtp')      selected @endif>SMTP</option>
+                        <option value="sendmail"    @if ((string) $mail_driver === 'sendmail')  selected @endif>Sendmail</option>
+                        <option value="mailgun"     @if ((string) $mail_driver === 'mailgun')   selected @endif>Mailgun</option>
+                        <option value="mandrill"    @if ((string) $mail_driver === 'mandrill')  selected @endif>Mandrill</option>
+                        <option value="ses"         @if ((string) $mail_driver === 'sess')      selected @endif>SES</option>
+                        <option value="sparkpost"   @if ((string) $mail_driver === 'sparkpost') selected @endif>Sparkpost</option>
+                        <option value="log"         @if ((string) $mail_driver === 'log')       selected @endif>Log</option>
+                        <option value="array"       @if ((string) $mail_driver === 'array')     selected @endif>Array</option>
                     </select>
                 </div>
 
                 <div class="col-md-3">
                     <select name="MAIL_ENCRYPTION" class="form-control">
                         <option value="">-- Encryptie --</option>
-                        <option value="tls">TLS</option>
-                        <option value="ssl">SSL</option>
+                        <option value="tls" @if ((string) $mail_encryption === 'tls') selected @endif>TLS</option>
+                        <option value="ssl" @if ((string) $mail_encryption === 'ssl') selected @endif>SSL</option>
                     </select>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 </label>
 
                 <div class="col-md-9">
-                    <input type="text" class="form-control" placeholder="Mailer server gebruikersnaam" value="{{ $mail_username }}" name="M">
+                    <input type="text" name="MAIL_USERNAME" class="form-control" placeholder="Mailer server gebruikersnaam" value="{{ $mail_username }}">
                 </div>
             </div>
 
@@ -92,7 +92,7 @@
                 </label>
 
                 <div class="col-md-9">
-                    <input type="text" value="" class="form-control" placeholder="Verzender zijn naam">
+                    <input type="text" value="{{ $sender_name }}" name="MAIL_FROM_NAME" class="form-control" placeholder="Verzender zijn naam">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                 </label>
 
                 <div class="col-md-9">
-                    <input type="email" value="" class="form-control" placeholder="Verzender zijn email adres">
+                    <input type="email" value="{{ $sender_address }}" name="MAIL_FROM_ADDRESS" class="form-control" placeholder="Verzender zijn email adres">
                 </div>
             </div>
 

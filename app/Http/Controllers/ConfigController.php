@@ -6,9 +6,19 @@ use Brotzka\DotenvEditor\DotenvEditor as Env;
 use Brotzka\DotenvEditor\Exceptions\DotEnvException;
 use Illuminate\Http\Request;
 
+/**
+ * Class ConfigController
+ *
+ * @package App\Http\Controllers
+ */
 class ConfigController extends Controller
 {
-    public function index(Request $request)
+    /**
+     * The database configuration view.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
     {
         $env = new Env();
 
@@ -26,6 +36,11 @@ class ConfigController extends Controller
         }
     }
 
+    /**
+     * The backup configuration view.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function getBackups()
     {
         $env = new Env();
@@ -39,6 +54,11 @@ class ConfigController extends Controller
         return view('config.backups', $data);
     }
 
+    /**
+     * SMTP configuration view.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function smtp()
     {
         $env = new Env();
@@ -51,12 +71,20 @@ class ConfigController extends Controller
             $data['mail_password']      = $env->getValue('MAIL_PASSWORD');
             $data['mail_encryption']    = $env->getValue('MAIL_ENCRYPTION');
 
+            $data['sender_name']        = $env->getValue('MAIL_FROM_NAME');
+            $data['sender_address']     = $env->getValue('MAIL_FROM_ADDRESS');
+
             return view('config.smtp', $data);
         } catch(DotEnvException $e) {
             echo $e->getMessage();
         }
     }
 
+    /**
+     * GitHub configuration field.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function github()
     {
         $env = new Env();

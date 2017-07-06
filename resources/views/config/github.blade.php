@@ -12,7 +12,7 @@
         Dus wees zeker van je gegevens die je wilt aanpassen of invullen.
     </div>
 
-    <form class="form-horizontal" method="post" action="">
+    <form class="form-horizontal" method="post" action="{{ route('config.update.github') }}">
         {{ csrf_field() }}
 
         <div class="form-group">
@@ -21,7 +21,7 @@
             </label>
 
             <div class="col-md-9">
-                <input type="text" class="form-control" placeholder="GitHub gebruikersnaam" value="{{ $github_user }}">
+                <input type="text" class="form-control" name="GITHUB_USER" placeholder="GitHub gebruikersnaam" value="{{ $github_user }}">
             </div>
         </div>
 
@@ -31,7 +31,7 @@
             </label>
 
             <div class="col-md-9">
-                <input type="text" class="form-control" placeholder="GitHub wachtwoord">
+                <input type="text" class="form-control" name="GITHUB_PASSWORD" value="{{ old('GITHUB_PASSWORD') }}" placeholder="GitHub wachtwoord">
                 <small class="help-block">* Wachtwoord word niet weergegeven uit veiligheid.</small>
             </div>
         </div>
