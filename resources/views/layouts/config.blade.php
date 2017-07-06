@@ -137,10 +137,10 @@
 
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="" class="list-group-item">
+                    {{-- <a href="" class="list-group-item">
                         <span style="margin-right: 7px;" class="fa fa-btn fa-color fa-cog" aria-hidden="true"></span>
                         Applicatie configuratie
-                    </a>
+                    </a> --}}
                     <a href="{{ route('config.index') }}" class="list-group-item">
                         <span style="margin-right: 7px;" class="fa fa-btn fa-color fa-database" aria-hidden="true"></span>
                         Databank configuratie

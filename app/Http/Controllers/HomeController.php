@@ -31,10 +31,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function storePetitionText()
-    {
-        LanguageLine::updateOrCreate();
-        LanguageLine::updateOrCreate();
-    }
 }
