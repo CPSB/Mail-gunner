@@ -13,7 +13,7 @@ class SignatureValidator extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class SignatureValidator extends FormRequest
     public function rules()
     {
         return [
-            //
+            'city'          => 'required',
+            'postal_code'   => 'required',
+            'email'         => 'required',
+            'name'          => 'required',
+            'country_id'    => 'required'
         ];
     }
 }
