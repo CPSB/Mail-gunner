@@ -15,6 +15,7 @@ class HomeController extends Controller
     {
         $this->middleware('lang');
         $this->middleware('auth')->only('index');
+        $this->middleware('role:Admin')->only('index');
     }
 
     public function welcome()
