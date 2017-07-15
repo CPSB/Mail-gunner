@@ -17,6 +17,7 @@ class ConfigController extends Controller
     {
         $this->middleware('lang');
         $this->middleware('auth');
+        $this->middleware('role:Admin');
     }
 
     /**

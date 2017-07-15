@@ -12,6 +12,7 @@ class StatisticsController extends Controller
     {
         $this->middleware('lang');
         $this->middleware('auth');
+        $this->middleware('role:Admin');
     }
 
     public function index()
