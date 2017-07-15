@@ -30,7 +30,7 @@
                             De website kan hyperlinks bevatten naar websites of pagina's van derden, of daar onrechtstreeks naar verwijzen. Het plaatsten van links naar deze websites of pagina's impliceert op
                             geen enkele wijze een impliciete goedkeuring van de inhoud ervan. ActivismeBE verklaart uitdrukkelijk dat zij geen zeggenschap heeft over de inhoud over de inhoud of
                             over andere kenmerken van deze websites en kan in geen geval aansprakelijk gehouden worden voor de inhoud of de kenmerken ervan of voor enige andere vorm van schade door het gebruik ervan.
-                        </p> <h3>Privacybeleid.</h3> <p><strong>ActivismeBE hecht beland aan uw privacy.</strong></p> <p>In geval de gebruiker van de website om persoonlijke informatie gevraagd wordt:</p> <p>
+                        </p> <h3>Privacybeleid.</h3> <p><strong>ActivismeBE hecht belang aan uw privacy.</strong></p> <p>In geval de gebruiker van de website om persoonlijke informatie gevraagd wordt:</p> <p>
                             De verantwoordelijke voor de verwerking, ActivismeBE respecteert de Belgische wetgeving van 8 december 1992 met betrekking tot de bescherming van het privéleven in
                             de verwerking van de persoonlijke gegevens. De door u meegedeelde persoonsgegevens zullen gebruikt worden voor de volgende doeleinden: Ons ledenbeheer, ondertekenen van petities.
                         </p> <p>
