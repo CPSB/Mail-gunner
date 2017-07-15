@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\Language;
+use App\Http\Middleware\RoleMiddleware;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -67,6 +68,7 @@ class Kernel extends HttpKernel
         'can'           => Authorize::class,
         'guest'         => RedirectIfAuthenticated::class,
         'throttle'      => ThrottleRequests::class,
-        'lang'          => Language::class
+        'lang'          => Language::class, 
+        'role'          => RoleMiddleware::class
     ];
 }
