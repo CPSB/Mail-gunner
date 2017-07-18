@@ -30,7 +30,6 @@ class SendPetitionMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('action.mail')
-            ->with($this->data);
+        return $this->markdown('action.mail');
     }
 }
