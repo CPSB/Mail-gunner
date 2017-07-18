@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'tim@activisme.be'),
-        'name' => env('MAIL_FROM_NAME', 'Tim Joosten'),
+        'address' => env('MAIL_FROM_ADDRESS', 'topairy'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
     /*
