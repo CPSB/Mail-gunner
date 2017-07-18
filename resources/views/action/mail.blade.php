@@ -1,8 +1,8 @@
 @component('mail::message')
-# {{ config('app.name') }}
+# @lang('action.title')}}
 
 @lang('action.text')
 
----
+<hr>
 Ik ben gestuurd in opdracht van {{ $input['name'] }}. Wonend te {{ $input['postal_code'] }}, {{ $input['city'] }}
 @endcomponent
