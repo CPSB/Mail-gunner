@@ -30,7 +30,7 @@ class MailingController extends Controller
     {
         if ($data = Senders::create($input->except(['_token']))) {
             flash('Wij bedanken je voor je steun. En hebben zonder problemen de mail overgebracht naar Jo vandeurzen en Maggie De Block');
-            Mail::to('mailing_test@activisme.be')->send(new SendPetitionMail($data));
+            Mail::to($data->email)->send(new SendPetitionMail($data));
         }
 
         return back(302);
