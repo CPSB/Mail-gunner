@@ -30,6 +30,8 @@ class SendPetitionMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('action.mail');
+        return $this->from('tim@activisme.be', 'Mail bomber')
+            ->subject('petitie!')
+            ->markdown('action.mail');
     }
 }
