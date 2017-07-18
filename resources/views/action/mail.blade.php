@@ -1,5 +1,5 @@
 @component('mail::message')
-# @lang('action.title')}}
+# @lang('action.title')
 
 @lang('action.text')
 
