@@ -11,5 +11,5 @@ class Senders extends Model
      * 
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = ['name', 'postal_code', 'email', 'city', 'country_id'];
 }
