@@ -4,5 +4,5 @@
 @lang('action.text')
 
 <hr>
-Ik ben gestuurd in opdracht van {{ $input['name'] }}. Wonend te {{ $input['postal_code'] }}, {{ $input['city'] }}
+<small>Ik ben gestuurd in opdracht van {{ $input['name'] }}. Wonend te {{ $input['postal_code'] }}, {{ ucfirst($input['city']) }}</small>
 @endcomponent
