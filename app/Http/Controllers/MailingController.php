@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SignatureValidator;
+use App\Mail\SendPetitionMail;
 use App\Senders;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * Class MailingController
@@ -26,8 +28,9 @@ class MailingController extends Controller
      */
     public function fire(SignatureValidator $input)
     {
-        if (Senders::create($input->except(['_token']))) {
+        if ($data = Senders::create($input->except(['_token']))) {
             flash('Wij bedanken je voor je steun. En hebben zonder problemen de mail overgebracht naar Jo vandeurzen en Maggie De Block');
+            Mail::to('mailing_test@activisme.be')->send(new SendPetitionMail($data));
         }
 
         return back(302);

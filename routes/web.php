@@ -21,6 +21,8 @@ Route::get('/config/backups', 'ConfigController@getBackups')->name('config.backu
 Route::get('/config/smtp', 'ConfigController@smtp')->name('config.smtp');
 Route::get('/config/github', 'ConfigController@github')->name('config.github');
 
+Route::post('/sign', 'MailingController@fire')->name('send.mail');
+
 Route::post('/config/update/github', 'EnvController@updateGithub')->name('config.update.github');
 Route::post('/config/update/smtp', 'EnvController@updateSmtp')->name('config.update.smtp');
 Route::post('/config/update/database', 'EnvController@updateDatabase')->name('config.update.db');

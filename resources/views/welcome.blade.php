@@ -23,7 +23,7 @@
                         <span class="fa fa-envelope" aria-hidden="true"></span> Ik steun deze mailingactie:
                     </div>
                     <div class="panel-body">
-                        <form id="support" class="form-horizontal">
+                        <form id="support" method="POST" action="{{ route('send.mail') }}" class="form-horizontal">
                             {{ csrf_field() }}
 
                             <div class="form-group">
